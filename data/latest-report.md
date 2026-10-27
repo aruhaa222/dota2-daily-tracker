@@ -1,8 +1,14 @@
 # Dota 2 daily report: 2026-10-27
 
 - Account ID: 294194492
-- Collected: 2026-10-27T22:25:19Z
-- New matches since previous run: 0
+- Collected (UTC): 2026-10-27T23:41:05Z
+- Compared with snapshot: no previous snapshot available
+- New matches since previous snapshot: 0
+
+## Overall record (OpenDota)
+
+- Wins / losses: 1890 / 1772
+- Win rate: 51.6%
 
 ## Recent matches
 

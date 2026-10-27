@@ -1,5 +1,5 @@
 {
-  "collected_at_utc": "2026-10-27T22:25:19Z",
+  "collected_at_utc": "2026-10-27T23:41:05Z",
   "account_id": 294194492,
   "player": {
     "profile": {
@@ -2008,5 +2008,6 @@
     }
   ],
   "errors": {},
-  "new_matches_since_previous_run": []
+  "new_matches_since_previous_run": [],
+  "comparison_snapshot": null
 }
