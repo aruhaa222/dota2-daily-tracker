@@ -1,8 +1,8 @@
-# Dota 2 daily report: 2026-10-27
+# Dota 2 daily report: 2026-10-28
 
 - Account ID: 294194492
-- Collected (UTC): 2026-10-27T23:41:05Z
-- Compared with snapshot: no previous snapshot available
+- Collected (UTC): 2026-10-28T07:57:01Z
+- Compared with snapshot: 2026-10-27T23:41:05Z
 - New matches since previous snapshot: 0
 
 ## Overall record (OpenDota)
