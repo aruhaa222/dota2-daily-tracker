@@ -10,7 +10,7 @@
 </style></head>
 <body><main class="wrap">
 <header class="top"><div class="brand"><div class="logo">DP</div><div><h1>DotaPulse</h1><small>Персональный тренер Dota 2</small></div></div><span class="beta">MVP 0.2 · FREE BETA</span></header>
-<section class="hero"><h2>Пойми, что мешает тебе побеждать.</h2><p class="sub">Разбор матчей, сильных сторон и повторяющихся игровых привычек.</p><div class="search"><input id="account" inputmode="numeric" autocomplete="off" placeholder="Steam / OpenDota Account ID" value="294194492"><button id="run">Разобрать профиль</button></div><div class="hint">Публичный профиль Dota 2 · Данные предоставляет OpenDota · Вход в Steam не требуется</div><div class="hint" style="margin-top:12px">Адрес API <input id="apiBase" value="http://127.0.0.1:8000" style="max-width:320px;padding:7px 9px;border:1px solid #39445d;border-radius:8px;background:#0d1220;color:var(--txt)" aria-label="Адрес DotaPulse API"> <span class="muted">Для локального запуска</span></div></section>
+<section class="hero"><h2>Пойми, что мешает тебе побеждать.</h2><p class="sub">Разбор матчей, сильных сторон и повторяющихся игровых привычек.</p><div class="search"><input id="account" inputmode="numeric" autocomplete="off" placeholder="Steam / OpenDota Account ID" value="294194492"><button id="run">Разобрать профиль</button></div><div class="hint">Публичный профиль Dota 2 · Данные предоставляет OpenDota · Вход в Steam не требуется</div><div class="hint" style="margin-top:12px">Адрес API <input id="apiBase" value="" placeholder="Автоматически" style="max-width:320px;padding:7px 9px;border:1px solid #39445d;border-radius:8px;background:#0d1220;color:var(--txt)" aria-label="Адрес DotaPulse API"> <span class="muted">Для локального запуска</span></div></section>
 <div id="status" class="status">Введи Account ID и запусти анализ.</div>
 <section id="dashboard" class="hidden">
 <div class="card"><div class="profile"><img id="avatar" class="avatar" alt=""><div><strong id="name">Игрок</strong><p id="rank">Ранг не определён</p><span id="idlabel" class="pill"></span></div></div></div>
@@ -44,9 +44,9 @@ function renderCoach(review){
  if(review?.next_session_plan?.length){$('coach').innerHTML+='<div class="tip"><b>План на следующую сессию</b><ul>'+review.next_session_plan.map(x=>'<li>'+x+'</li>').join('')+'</ul></div>'}
 }
 async function run(){
- const id=$('account').value.trim(),base=$('apiBase').value.trim().replace(/\/$/,'');
+ const id=$('account').value.trim(),base=$('apiBase').value.trim().replace(/\/$/,'')||window.location.origin;
  if(!/^\d{1,12}$/.test(id)){say('Укажи числовой Account ID.',true);return}
- if(!/^https?:\/\//i.test(base)){say('Укажи адрес API, начиная с http:// или https://',true);return}
+ if(!/^https?:\/\//i.test(base)){say('Не удалось определить адрес API.',true);return}
  $('run').disabled=true;$('dashboard').classList.add('hidden');say('Запрашиваю DotaPulse API…');
  try{
   const [overview,coach,progress]=await Promise.all([
