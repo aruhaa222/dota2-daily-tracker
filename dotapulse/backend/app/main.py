@@ -1,5 +1,7 @@
+from pathlib import Path
+
 from fastapi import FastAPI, HTTPException, Query
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 
 from .analytics import coach_review, compare_sessions, hero_summaries, summarize_matches
 from .opendota import OpenDotaClient, OpenDotaError
@@ -9,14 +11,13 @@ app = FastAPI(
     version="0.1.0",
     description="Статистика Dota 2 и проверяемые подсказки тренера на основе OpenDota.",
 )
-# Local development only. Replace with the deployed frontend origin before public launch.
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["http://localhost:8000", "http://127.0.0.1:8000", "http://localhost:5500", "http://127.0.0.1:5500", "http://localhost:5173", "http://127.0.0.1:5173"],
-    allow_credentials=False,
-    allow_methods=["GET"],
-    allow_headers=["*"],
-)
+# The API and the static frontend are served from the same origin in the hosted MVP.
+FRONTEND_FILE = Path(__file__).resolve().parents[2] / "index.html"
+
+
+@app.get("/", include_in_schema=False)
+async def frontend():
+    return FileResponse(FRONTEND_FILE)
 opendota = OpenDotaClient()
 
 
