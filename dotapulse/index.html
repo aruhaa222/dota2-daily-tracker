@@ -20,6 +20,7 @@
 <div class="card metric"><label>KDA</label><strong id="kda">—</strong><small>kills + assists / deaths</small></div>
 <div class="card metric"><label>Средняя длительность</label><strong id="duration">—</strong><small>минут на матч</small></div>
 </div>
+<div class="card" style="margin-top:12px"><h3>Прогресс между сессиями</h3><div id="progressText" class="muted">Сравнение последних 10 матчей с предыдущими 10 появится после анализа.</div><div class="grid" style="margin-bottom:0"><div class="metric"><label>Изменение винрейта</label><strong id="deltaWr">—</strong></div><div class="metric"><label>Изменение KDA</label><strong id="deltaKda">—</strong></div><div class="metric"><label>Изменение смертей</label><strong id="deltaDeaths">—</strong></div><div class="metric"><label>Изменение GPM</label><strong id="deltaGpm">—</strong></div></div></div>
 <div class="columns">
 <div class="card"><h3>Баланс результатов</h3><div class="muted">Победы <b id="wins">—</b></div><div class="bar"><span id="winbar"></span></div><div class="muted">Поражения <b id="losses">—</b></div><div class="bar loss"><span id="lossbar"></span></div><div class="note" id="sample">Выводы ограничены размером выборки.</div></div>
 <div class="card"><h3>Тренер: что проверить</h3><div id="coach" class="coach"></div></div>
@@ -48,9 +49,10 @@ async function run(){
  if(!/^https?:\/\//i.test(base)){say('Укажи адрес API, начиная с http:// или https://',true);return}
  $('run').disabled=true;$('dashboard').classList.add('hidden');say('Запрашиваю DotaPulse API…');
  try{
-  const [overview,coach]=await Promise.all([
+  const [overview,coach,progress]=await Promise.all([
    request(base+'/api/v1/players/'+id+'/overview?limit=50'),
-   request(base+'/api/v1/players/'+id+'/coach?limit=50')
+   request(base+'/api/v1/players/'+id+'/coach?limit=50'),
+   request(base+'/api/v1/players/'+id+'/progress?session_size=10')
   ]);
   const p=overview.profile||{},stats=overview.stats||{},matches=overview.matches||[],heroRows=overview.heroes||[];
   if(!matches.length)throw new Error('Матчи не найдены. Проверь Account ID и публичность профиля.');
@@ -69,7 +71,14 @@ async function run(){
    const radiant=Number(m.player_slot)<128,win=typeof m.radiant_win==='boolean'?(m.radiant_win===radiant):null;
    return '<tr><td>'+heroName(m.hero_id,constants)+'</td><td class="'+(win===true?'win':win===false?'lossText':'')+'">'+(win===true?'Победа':win===false?'Поражение':'Неизвестно')+'</td><td>'+(m.kills??0)+'/'+(m.deaths??0)+'/'+(m.assists??0)+'</td></tr>'
   }).join('');
-  renderCoach(coach);$('dashboard').classList.remove('hidden');
+  renderCoach(coach);
+  const delta=progress.delta||{},fmt=(v,suffix='')=>v===null||v===undefined?'—':(v>0?'+':'')+v+suffix;
+  $('deltaWr').textContent=fmt(delta.win_rate,' п.п.');
+  $('deltaKda').textContent=fmt(delta.avg_kda);
+  $('deltaDeaths').textContent=fmt(delta.avg_deaths);
+  $('deltaGpm').textContent=fmt(delta.avg_gpm);
+  $('progressText').textContent=progress.status==='compared'?'Последние '+progress.current.matches+' матчей против предыдущих '+progress.previous.matches+'. '+progress.message:progress.message;
+  $('dashboard').classList.remove('hidden');
   say('Готово. Данные получены через DotaPulse API; подсказки сформированы аналитическим модулем.');
  }catch(e){say((e.message||'Не удалось получить данные.')+' Проверь, что backend запущен и адрес API доступен из браузера.',true)}
  finally{$('run').disabled=false}
