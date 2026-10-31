@@ -9,34 +9,25 @@
 
 - Wins / losses: 1894 / 1776
 - Win rate: 51.6%
+- Computed MMR: 4057.84 (previous snapshot: 4001.37; change: +56.47)
+- Rank tier: 61 (Ancient I; unchanged)
 
-## Recent matches
+## Recent form
 
-- Match `9068917350`: LOSS; K/D/A 4/12/11; duration 31 min
-- Match `9068843414`: WIN; K/D/A 11/10/30; duration 41 min
-- Match `9068772383`: WIN; K/D/A 5/10/25; duration 35 min
-- Match `9068601901`: WIN; K/D/A 5/15/35; duration 61 min
-- Match `9068541731`: WIN; K/D/A 3/8/35; duration 30 min
-- Match `9066238280`: LOSS; K/D/A 4/14/13; duration 42 min
-- Match `9066185565`: LOSS; K/D/A 2/12/12; duration 31 min
-- Match `9066040572`: LOSS; K/D/A 7/19/23; duration 55 min
-- Match `9063490725`: WIN; K/D/A 5/12/34; duration 45 min
-- Match `9063435350`: WIN; K/D/A 9/8/25; duration 39 min
-- Match `9063368389`: WIN; K/D/A 2/2/17; duration 22 min
-- Match `9063282328`: WIN; K/D/A 5/10/31; duration 53 min
-- Match `9062980008`: LOSS; K/D/A 13/19/26; duration 60 min
-- Match `9060271917`: WIN; K/D/A 6/17/33; duration 51 min
-- Match `9060160140`: LOSS; K/D/A 2/10/14; duration 36 min
-- Match `9060085063`: WIN; K/D/A 4/6/20; duration 30 min
-- Match `9056964360`: WIN; K/D/A 9/5/24; duration 43 min
-- Match `9056799637`: WIN; K/D/A 4/9/27; duration 36 min
-- Match `9056700110`: LOSS; K/D/A 3/18/26; duration 56 min
-- Match `9054383519`: LOSS; K/D/A 7/17/16; duration 41 min
+- Last 5: 4-1; average K/D/A 5.6 / 11.0 / 27.2
+- Last 10: 6-4; average K/D/A 5.5 / 12.0 / 24.3
+- Last 20: 12-8; average K/D/A 5.5 / 11.65 / 23.85
 
-## Newly detected matches
+## New matches
 
-- `9068917350`: LOSS; K/D/A 4/12/11
-- `9068843414`: WIN; K/D/A 11/10/30
-- `9068772383`: WIN; K/D/A 5/10/25
-- `9068601901`: WIN; K/D/A 5/15/35
-- `9068541731`: WIN; K/D/A 3/8/35
+- Match `9068917350`: Ringmaster, LOSS; K/D/A 4/12/11; 31:20
+- Match `9068843414`: Ringmaster, WIN; K/D/A 11/10/30; 41:22
+- Match `9068772383`: Ringmaster, WIN; K/D/A 5/10/25; 35:50
+- Match `9068601901`: Ringmaster, WIN; K/D/A 5/15/35; 61:32
+- Match `9068541731`: Winter Wyvern, WIN; K/D/A 3/8/35; 30:47
+
+## Full analysis
+
+See [2026-10-31-analysis.md](2026-10-31-analysis.md) for hero, role, support-metric, and training analysis.
+
+Note: OpenDota snapshot has no API errors. Dotabuff could not be independently verified. Rank history's latest entry is 2026-10-16, so no fresh medal movement is confirmed. Lane/role and ward/deward metrics are incomplete.
