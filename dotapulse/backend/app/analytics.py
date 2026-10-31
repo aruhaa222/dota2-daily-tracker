@@ -45,16 +45,25 @@ def hero_summaries(matches: list[dict]) -> list[dict]:
         result = is_win(match)
         hero_id = match.get("hero_id")
         if result is not None and isinstance(hero_id, int):
-            grouped[hero_id].append(result)
+            grouped[hero_id].append({
+                "win": result,
+                "kills": int(match.get("kills") or 0),
+                "deaths": int(match.get("deaths") or 0),
+                "assists": int(match.get("assists") or 0),
+            })
     rows = []
-    for hero_id, results in grouped.items():
-        wins = sum(results)
+    for hero_id, games in grouped.items():
+        wins = sum(1 for game in games if game["win"])
+        kills = sum(game["kills"] for game in games)
+        deaths = sum(game["deaths"] for game in games)
+        assists = sum(game["assists"] for game in games)
         rows.append({
             "hero_id": hero_id,
-            "matches": len(results),
+            "matches": len(games),
             "wins": wins,
-            "losses": len(results) - wins,
-            "win_rate": round(wins / len(results) * 100, 1),
+            "losses": len(games) - wins,
+            "win_rate": round(wins / len(games) * 100, 1),
+            "avg_kda": round((kills + assists) / max(deaths, 1), 2),
         })
     return sorted(rows, key=lambda row: (-row["matches"], row["hero_id"]))
 
