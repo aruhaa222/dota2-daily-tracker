@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0e17">
+<title>DotaPulse | Персональный тренер Dota 2</title>
+<style>
+:root{color-scheme:dark;--bg:#0b0e17;--panel:#141a28;--panel2:#1b2334;--line:#2b354b;--txt:#edf1fa;--muted:#9ba8bf;--violet:#9584ff;--green:#4ed6a0;--red:#ff7185;--amber:#ffc66d}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(900px 520px at 85% -10%,#28234a 0,transparent 58%),var(--bg);color:var(--txt);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}.wrap{max-width:1120px;margin:auto;padding:22px 18px 56px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}.brand{display:flex;gap:11px;align-items:center}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#a797ff,#5146a8);display:grid;place-items:center;font-weight:900;font-size:19px}.brand h1{font-size:20px;margin:0}.brand small{display:block;color:var(--muted);font-size:12px}.beta{border:1px solid #554c83;border-radius:30px;padding:5px 10px;color:#c9c0ff;font-size:11px}.hero,.card{background:var(--panel);border:1px solid var(--line);border-radius:18px}.hero{padding:23px;background:linear-gradient(120deg,#1b2233,#17172b 72%,#292044)}h2{font-size:25px;margin:0 0 5px}.sub{color:var(--muted);margin:0 0 17px}.search{display:flex;gap:9px;max-width:640px}.search input{flex:1;min-width:0;padding:12px 14px;border:1px solid #39445d;border-radius:11px;background:#0d1220;color:var(--txt);font-size:15px}.search input:focus{outline:1px solid var(--violet)}button{border:0;border-radius:11px;padding:12px 17px;background:linear-gradient(135deg,#9d8aff,#6256c8);color:white;font-weight:700;cursor:pointer}button:disabled{opacity:.55;cursor:wait}.hint,.muted{color:var(--muted);font-size:12px}.hint{margin-top:8px}.status{min-height:24px;padding:12px 2px;color:var(--muted);font-size:13px}.error{color:var(--red)}.hidden{display:none!important}.card{padding:16px;min-width:0}.profile{display:flex;gap:13px;align-items:center}.avatar{width:58px;height:58px;border-radius:15px;background:#273149;object-fit:cover}.profile strong{font-size:18px}.profile p{margin:2px 0;color:var(--muted);font-size:12px}.pill{display:inline-block;border:1px solid var(--line);border-radius:30px;padding:3px 8px;font-size:11px;color:#c9d1e3;margin-top:5px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:12px 0}.metric label{font-size:12px;color:var(--muted)}.metric strong{display:block;font-size:25px;margin-top:5px}.metric small{font-size:11px;color:var(--muted)}.columns{display:grid;grid-template-columns:1.05fr .95fr;gap:12px;margin-top:12px}.card h3{font-size:15px;margin:0 0 12px}.bar{height:8px;background:#2a3347;border-radius:20px;overflow:hidden;margin:7px 0 12px}.bar span{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,#7d70e8,#4ed6a0)}.bar.loss span{background:linear-gradient(90deg,#ff7185,#a74461)}table{width:100%;border-collapse:collapse;font-size:13px}td,th{text-align:left;padding:8px 5px;border-bottom:1px solid #283147}th{font-size:11px;color:var(--muted)}td:last-child,th:last-child{text-align:right}.win{color:var(--green)}.lossText{color:var(--red)}.coach{display:grid;gap:8px}.tip{background:var(--panel2);border:1px solid #303b53;border-radius:12px;padding:11px;font-size:13px}.tip b{display:block;margin-bottom:3px}.tip .why{color:var(--muted);font-size:11px;margin-top:5px}.note{margin-top:12px;padding:11px;border-radius:12px;background:#111827;color:var(--muted);font-size:11px}.footer{text-align:center;color:#748098;font-size:11px;margin-top:22px}@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.columns{grid-template-columns:1fr}.search{flex-direction:column}.search button{width:100%}.beta{display:none}h2{font-size:22px}}
+</style></head>
+<body><main class="wrap">
+<header class="top"><div class="brand"><div class="logo">DP</div><div><h1>DotaPulse</h1><small>Персональный тренер Dota 2</small></div></div><span class="beta">MVP 0.2 · FREE BETA</span></header>
+<section class="hero"><h2>Пойми, что мешает тебе побеждать.</h2><p class="sub">Разбор матчей, сильных сторон и повторяющихся игровых привычек.</p><div class="search"><input id="account" inputmode="numeric" autocomplete="off" placeholder="Steam / OpenDota Account ID" value="294194492"><button id="run">Разобрать профиль</button></div><div class="hint">Публичный профиль Dota 2 · Данные предоставляет OpenDota · Вход в Steam не требуется</div></section>
+<div id="status" class="status">Введи Account ID и запусти анализ.</div>
+<section id="dashboard" class="hidden">
+<div class="card"><div class="profile"><img id="avatar" class="avatar" alt=""><div><strong id="name">Игрок</strong><p id="rank">Ранг не определён</p><span id="idlabel" class="pill"></span></div></div></div>
+<div class="grid">
+<div class="card metric"><label>Матчи в выборке</label><strong id="count">—</strong><small>последние матчи</small></div>
+<div class="card metric"><label>Винрейт</label><strong id="wr">—</strong><small id="record">—</small></div>
+<div class="card metric"><label>KDA</label><strong id="kda">—</strong><small>kills + assists / deaths</small></div>
+<div class="card metric"><label>Средняя длительность</label><strong id="duration">—</strong><small>минут на матч</small></div>
+</div>
+<div class="columns">
+<div class="card"><h3>Баланс результатов</h3><div class="muted">Победы <b id="wins">—</b></div><div class="bar"><span id="winbar"></span></div><div class="muted">Поражения <b id="losses">—</b></div><div class="bar loss"><span id="lossbar"></span></div><div class="note" id="sample">Выводы ограничены размером выборки.</div></div>
+<div class="card"><h3>Тренер: что проверить</h3><div id="coach" class="coach"></div></div>
+</div>
+<div class="columns">
+<div class="card"><h3>Герои в последних матчах</h3><div style="overflow:auto"><table><thead><tr><th>Герой</th><th>Игры</th><th>WR</th><th>KDA</th></tr></thead><tbody id="heroes"></tbody></table></div></div>
+<div class="card"><h3>Последние игры</h3><div style="overflow:auto"><table><thead><tr><th>Герой</th><th>Итог</th><th>K/D/A</th></tr></thead><tbody id="recent"></tbody></table></div></div>
+</div>
+</section>
+<footer class="footer">DotaPulse — независимый фанатский проект, не связанный с Valve. Советы MVP основаны на статистических эвристиках, а не на просмотре реплеев или доказанном причинном анализе.</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id),API='https://api.opendota.com/api';
+const pct=x=>(x*100).toFixed(1)+'%',avg=(a,k)=>a.length?a.reduce((s,x)=>s+(Number(x[k])||0),0)/a.length:0;
+let heroes={};
+function say(s,bad=false){$('status').textContent=s;$('status').className='status'+(bad?' error':'')}
+async function api(path){const r=await fetch(API+path);if(!r.ok)throw new Error('OpenDota: HTTP '+r.status);return r.json()}
+function won(m){if(m.radiant_win===undefined||m.player_slot===undefined)return null;return Boolean(m.radiant_win)===(m.player_slot<128)}
+function heroName(id){return heroes[id]?.localized_name||'Герой '+id}
+function advice(matches,wins,wr,kda,deaths,byHero){
+ const tips=[];
+ if(deaths>=7)tips.push(['Проверь причины смертей',`В среднем ${deaths.toFixed(1)} смертей за игру. Просмотри 3 последние смерти в реплеях: позиция, информация о врагах, доступность союзников и цена риска.`,'Гипотеза по агрегированной статистике. Не означает, что каждая смерть была ошибкой.']);
+ if(wr<.45&&matches.length>=10)tips.push(['Стабилизируй пул героев',`В выборке ${pct(wr)} побед. Сравни результаты на героях с минимум 5 играми и временно сосредоточься на тех, где лучше результат.`,'Винрейт зависит от роли, патча, союзников и размера выборки.']);
+ if(kda<2.2)tips.push(['Разбери участие в драках',`KDA ${kda.toFixed(2)}. Посмотри, успеваешь ли ты подключаться к ключевым дракам и сохранять позицию после использования способностей.`,'KDA не оценивает качество решений и вклад в цели напрямую.']);
+ const best=Object.entries(byHero).filter(([,x])=>x.n>=3).sort((a,b)=>(b[1].w/b[1].n)-(a[1].w/a[1].n))[0];
+ if(best)tips.push(['Найди комфортного героя',`${heroName(best[0])}: ${best[1].n} игр, ${pct(best[1].w/best[1].n)} побед. Проверь, совпадает ли хороший результат с комфортной ролью и стилем.`,'Маленькая выборка может сильно колебаться.']);
+ if(!tips.length)tips.push(['Собери больше данных','Сыграй ещё 10–20 матчей на привычных героях. Тогда сравнение станет устойчивее.','Первые выводы носят ориентировочный характер.']);
+ return tips.slice(0,4)
+}
+async function run(){
+ const id=$('account').value.trim();if(!/^\d{1,12}$/.test(id)){say('Укажи числовой Account ID.',true);return}
+ $('run').disabled=true;$('dashboard').classList.add('hidden');say('Получаю профиль и последние матчи…');
+ try{
+  const [p,matches,constants]=await Promise.all([api('/players/'+id),api('/players/'+id+'/recentMatches'),api('/constants/heroes')]);heroes=constants;
+  if(!Array.isArray(matches)||!matches.length)throw new Error('Матчи не найдены. Проверь ID и публичность игрового профиля.');
+  const valid=matches.filter(m=>won(m)!==null),wins=valid.filter(m=>won(m)).length,losses=valid.length-wins,wr=valid.length?wins/valid.length:0;
+  const kills=avg(valid,'kills'),deaths=avg(valid,'deaths'),assists=avg(valid,'assists'),kda=(kills+assists)/Math.max(deaths,.5);
+  const byHero={};valid.forEach(m=>{const h=m.hero_id,x=byHero[h]||(byHero[h]={n:0,w:0,k:0,d:0,a:0});x.n++;x.w+=won(m)?1:0;x.k+=m.kills||0;x.d+=m.deaths||0;x.a+=m.assists||0});
+  $('avatar').src=p.profile?.avatarfull||'';$('name').textContent=p.profile?.personaname||('Игрок '+id);$('rank').textContent=p.rank_tier?'Медаль: '+Math.floor(p.rank_tier/10):'Ранг не раскрыт';$('idlabel').textContent='Account ID: '+id;
+  $('count').textContent=valid.length;$('wr').textContent=valid.length?pct(wr):'—';$('record').textContent=wins+' побед · '+losses+' поражений';$('kda').textContent=kda.toFixed(2);$('duration').textContent=(avg(valid,'duration')/60).toFixed(1);
+  $('wins').textContent=wins;$('losses').textContent=losses;$('winbar').style.width=pct(wr);$('lossbar').style.width=pct(1-wr);
+  $('sample').textContent='Выборка: '+valid.length+' матчей. Это не полный сезонный рейтинг; для выводов по герою желательно не менее 5–10 игр.';
+  $('heroes').innerHTML=Object.entries(byHero).sort((a,b)=>b[1].n-a[1].n).slice(0,8).map(([id,x])=>'<tr><td>'+heroName(id)+'</td><td>'+x.n+'</td><td class="'+(x.w/x.n>=.5?'win':'lossText')+'">'+pct(x.w/x.n)+'</td><td>'+((x.k+x.a)/Math.max(x.d,.5)).toFixed(2)+'</td></tr>').join('');
+  $('recent').innerHTML=valid.slice(0,10).map(m=>'<tr><td>'+heroName(m.hero_id)+'</td><td class="'+(won(m)?'win':'lossText')+'">'+(won(m)?'Победа':'Поражение')+'</td><td>'+(m.kills||0)+'/'+(m.deaths||0)+'/'+(m.assists||0)+'</td></tr>').join('');
+  $('coach').innerHTML=advice(valid,wins,wr,kda,deaths,byHero).map(t=>'<div class="tip"><b>'+t[0]+'</b>'+t[1]+'<div class="why">'+t[2]+'</div></div>').join('');
+  $('dashboard').classList.remove('hidden');say('Анализ готов. Следующий шаг: сравнить несколько игровых сессий и проверить гипотезы по реплеям.');
+ }catch(e){say(e.message||'Не удалось получить данные.',true)}finally{$('run').disabled=false}
+}
+$('run').addEventListener('click',run);$('account').addEventListener('keydown',e=>{if(e.key==='Enter')run()});
+</script></body></html>
