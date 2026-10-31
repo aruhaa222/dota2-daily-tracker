@@ -35,3 +35,21 @@ def test_coach_discloses_small_sample():
     result = coach_review([sample()])
     assert result["observations"][0]["type"] == "sample_size"
     assert result["limitations"]
+
+
+def test_session_comparison_compares_newest_and_previous_blocks():
+    from app.analytics import compare_sessions
+    recent = [sample() for _ in range(5)]
+    previous = [sample(radiant_win=False, deaths=8) for _ in range(5)]
+    result = compare_sessions(recent + previous, session_size=5)
+    assert result["status"] == "compared"
+    assert result["current"]["win_rate"] == 100.0
+    assert result["previous"]["win_rate"] == 0.0
+    assert result["delta"]["win_rate"] == 100.0
+
+
+def test_session_comparison_handles_missing_history():
+    from app.analytics import compare_sessions
+    result = compare_sessions([sample()], session_size=5)
+    assert result["status"] == "insufficient_history"
+    assert result["delta"]["win_rate"] is None
