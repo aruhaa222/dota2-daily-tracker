@@ -112,3 +112,40 @@ def coach_review(matches: list[dict]) -> dict:
             "Результаты зависят от размера и состава выборки.",
         ],
     }
+
+
+def compare_sessions(matches: list[dict], session_size: int = 10) -> dict:
+    """Compare the newest session with the immediately preceding session."""
+    if session_size < 1:
+        raise ValueError("session_size must be positive")
+    recent = matches[:session_size]
+    previous = matches[session_size:session_size * 2]
+    current_stats = summarize_matches(recent)
+    previous_stats = summarize_matches(previous)
+
+    def delta(key):
+        current, prior = current_stats.get(key), previous_stats.get(key)
+        if current is None or prior is None:
+            return None
+        return round(current - prior, 2)
+
+    if not previous_stats["matches"]:
+        status = "insufficient_history"
+        message = "Для сравнения нужна предыдущая игровая сессия. Сейчас доступна только текущая выборка."
+    else:
+        status = "compared"
+        message = "Сравнение описывает изменение статистики, но не устанавливает причину."
+    return {
+        "status": status,
+        "session_size": session_size,
+        "current": current_stats,
+        "previous": previous_stats,
+        "delta": {
+            "win_rate": delta("win_rate"),
+            "avg_kda": delta("avg_kda"),
+            "avg_deaths": delta("avg_deaths"),
+            "avg_gpm": delta("avg_gpm"),
+            "avg_xpm": delta("avg_xpm"),
+        },
+        "message": message,
+    }
