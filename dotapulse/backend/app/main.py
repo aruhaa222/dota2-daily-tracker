@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
-from .analytics import coach_review, hero_summaries, summarize_matches
+from .analytics import coach_review, compare_sessions, hero_summaries, summarize_matches
 from .opendota import OpenDotaClient, OpenDotaError
 
 app = FastAPI(
@@ -65,3 +65,12 @@ async def player_overview(account_id: int, limit: int = Query(default=50, ge=1, 
 async def player_coach(account_id: int, limit: int = Query(default=50, ge=1, le=100)):
     matches = await api_get(account_path(account_id, "/recentMatches"))
     return {"account_id": account_id, **coach_review(matches[:limit])}
+
+
+@app.get("/api/v1/players/{account_id}/progress")
+async def player_progress(account_id: int, session_size: int = Query(default=10, ge=3, le=30)):
+    matches = await api_get(account_path(account_id, "/recentMatches"))
+    return {
+        "account_id": account_id,
+        **compare_sessions(matches, session_size=session_size),
+    }
