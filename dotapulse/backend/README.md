@@ -19,6 +19,17 @@ uvicorn app.main:app --reload
 Проверка: http://127.0.0.1:8000/health  
 Swagger: http://127.0.0.1:8000/docs
 
+## Запуск веб-интерфейса
+
+Во втором терминале из корня репозитория:
+
+```bash
+cd dotapulse
+python -m http.server 5500
+```
+
+Открой http://127.0.0.1:5500. В поле «Адрес API» оставь `http://127.0.0.1:8000`. Backend должен быть запущен отдельно.
+
 ## API
 
 - `GET /api/v1/players/{account_id}/overview?limit=50`
@@ -36,7 +47,7 @@ PYTHONPATH=. pytest -q
 
 ## Перед публичным запуском
 
-- Заменить CORS localhost на точный домен фронтенда.
+- Заменить CORS localhost на точный домен фронтенда перед публикацией.
 - Добавить общий rate limit и устойчивый внешний кэш.
 - Не хранить OpenDota API key в браузере.
 - Добавить интеграционные тесты и мониторинг.
