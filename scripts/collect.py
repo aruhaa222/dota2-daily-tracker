@@ -89,10 +89,26 @@ def main():
         "comparison_note": "Only IDs absent from the previous recent_matches list are marked new; older matches beyond the API window cannot be detected."
     }
     DATA.mkdir(exist_ok=True)
+    archive_path = DATA / "match-history.json"
+    archive = []
+    if archive_path.exists():
+        with archive_path.open(encoding="utf-8") as fh:
+            stored = json.load(fh)
+        if not isinstance(stored, list):
+            raise RuntimeError("Existing match archive is not a list; refusing to overwrite")
+        archive = stored
+    by_id = {}
+    for item in archive + recent:
+        if isinstance(item, dict) and isinstance(item.get("match_id"), int):
+            by_id[item["match_id"]] = item
+    archive = sorted(by_id.values(), key=lambda m: m.get("start_time") or 0, reverse=True)
+    # Keep a bounded history to limit repository growth.
+    archive = archive[:1000]
     dated = DATA / (now.date().isoformat() + ".json")
     write_json(dated, snapshot)
     write_json(DATA / "latest.json", snapshot)
-    print(f"Snapshot {stamp}: {len(recent)} recent matches, {len(new_ids)} newly seen IDs, {len(errors)} optional API errors")
+    write_json(archive_path, archive)
+    print(f"Snapshot {stamp}: {len(recent)} recent matches, {len(new_ids)} newly seen IDs, {len(archive)} archived matches, {len(errors)} optional API errors")
 
 
 if __name__ == "__main__":
