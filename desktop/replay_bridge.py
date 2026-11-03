@@ -14,7 +14,7 @@ from tkinter import filedialog, messagebox, ttk
 
 APP = "DotaPulse Replay Bridge 5.0"
 DEFAULT_DIR = Path.home() / "Documents" / "DotaPulse"
-REPLAY_PATTERN = re.compile(r"(?<!\\d)(\\d{9,12})(?!\\d)")
+REPLAY_PATTERN = re.compile(r"(?<!\d)(\d{9,12})(?!\d)")
 
 def collect(folder):
     results = []
