@@ -29,3 +29,12 @@
 - Веб-панель использует общедоступные данные OpenDota, которые могут запаздывать.
 - Расчётный MMR не является официальным MMR Valve.
 - Для глубокого разбора реплеев понадобится совместимый с текущей версией Dota 2 DEM-парсер и отдельный этап реализации.
+
+## Windows 11: готовый EXE без установки Python
+1. Откройте [Build Windows Replay Bridge](https://github.com/aruhaa222/dota2-daily-tracker/actions/workflows/build-windows.yml).
+2. Нажмите **Run workflow → Run workflow** (либо дождитесь автоматического запуска после изменения Windows-кода).
+3. Откройте успешный запуск (зелёная галочка), внизу в разделе **Artifacts** скачайте **DotaPulse-Replay-Bridge-Windows11**.
+4. Распакуйте ZIP, запустите `DotaPulse-Replay-Bridge.exe` на Windows 11.
+5. При предупреждении Windows SmartScreen проверьте источник и файл; неподписанные EXE могут вызывать предупреждения. Не отключайте защиту системы ради запуска.
+
+EXE собирается GitHub Actions на `windows-latest` через PyInstaller. Готовый бинарник не хранится в репозитории и доступен как artifact 30 дней. Пока сборка не завершилась успешно, наличие EXE не подтверждено.
