@@ -1,5 +1,5 @@
 {
-  "collected_at_utc": "2026-11-05T08:21:29Z",
+  "collected_at_utc": "2026-11-05T09:11:15Z",
   "account_id": 294194492,
   "player": {
     "profile": {
@@ -2009,5 +2009,6 @@
   ],
   "errors": {},
   "new_matches_since_previous_run": [],
-  "comparison_snapshot": "2026-11-04T20:05:08Z"
+  "comparison_snapshot": "2026-11-04T20:05:08Z",
+  "comparison_note": "Only IDs absent from the previous recent_matches list are marked new; older matches beyond the API window cannot be detected."
 }
