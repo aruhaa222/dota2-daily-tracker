@@ -1,5 +1,5 @@
 {
-  "collected_at_utc": "2026-11-11T20:08:56Z",
+  "collected_at_utc": "2026-11-12T09:12:15Z",
   "account_id": 294194492,
   "player": {
     "profile": {
@@ -22,7 +22,7 @@
     },
     "rank_tier": 55,
     "leaderboard_rank": null,
-    "computed_mmr": 4068.13,
+    "computed_mmr": 4068.47,
     "computed_mmr_turbo": 3983.77,
     "aliases": [
       {
@@ -92,6 +92,90 @@
     ]
   },
   "recent_matches": [
+    {
+      "match_id": 9086256050,
+      "player_slot": 0,
+      "radiant_win": true,
+      "hero_id": 44,
+      "start_time": 1794433250,
+      "duration": 2283,
+      "game_mode": 22,
+      "lobby_type": 7,
+      "version": null,
+      "kills": 21,
+      "deaths": 7,
+      "assists": 10,
+      "average_rank": 54,
+      "xp_per_min": 1011,
+      "gold_per_min": 738,
+      "hero_damage": 38355,
+      "tower_damage": 19793,
+      "hero_healing": 0,
+      "last_hits": 229,
+      "lane": null,
+      "lane_role": null,
+      "is_roaming": null,
+      "cluster": 183,
+      "leaver_status": 0,
+      "party_size": 5,
+      "hero_variant": 0
+    },
+    {
+      "match_id": 9086221196,
+      "player_slot": 0,
+      "radiant_win": false,
+      "hero_id": 48,
+      "start_time": 1794430810,
+      "duration": 2083,
+      "game_mode": 22,
+      "lobby_type": 7,
+      "version": null,
+      "kills": 11,
+      "deaths": 10,
+      "assists": 10,
+      "average_rank": 61,
+      "xp_per_min": 600,
+      "gold_per_min": 474,
+      "hero_damage": 24496,
+      "tower_damage": 18,
+      "hero_healing": 0,
+      "last_hits": 185,
+      "lane": null,
+      "lane_role": null,
+      "is_roaming": null,
+      "cluster": 185,
+      "leaver_status": 0,
+      "party_size": 5,
+      "hero_variant": 0
+    },
+    {
+      "match_id": 9086154552,
+      "player_slot": 0,
+      "radiant_win": false,
+      "hero_id": 44,
+      "start_time": 1794427021,
+      "duration": 3367,
+      "game_mode": 22,
+      "lobby_type": 7,
+      "version": null,
+      "kills": 22,
+      "deaths": 15,
+      "assists": 15,
+      "average_rank": 55,
+      "xp_per_min": 1356,
+      "gold_per_min": 812,
+      "hero_damage": 60129,
+      "tower_damage": 2480,
+      "hero_healing": 0,
+      "last_hits": 556,
+      "lane": null,
+      "lane_role": null,
+      "is_roaming": null,
+      "cluster": 183,
+      "leaver_status": 0,
+      "party_size": 5,
+      "hero_variant": 0
+    },
     {
       "match_id": 9086100538,
       "player_slot": 128,
@@ -567,95 +651,11 @@
       "leaver_status": 0,
       "party_size": 1,
       "hero_variant": 0
-    },
-    {
-      "match_id": 9083581657,
-      "player_slot": 128,
-      "radiant_win": false,
-      "hero_id": 131,
-      "start_time": 1794253626,
-      "duration": 2173,
-      "game_mode": 22,
-      "lobby_type": 7,
-      "version": null,
-      "kills": 7,
-      "deaths": 13,
-      "assists": 23,
-      "average_rank": 55,
-      "xp_per_min": 520,
-      "gold_per_min": 332,
-      "hero_damage": 12761,
-      "tower_damage": 392,
-      "hero_healing": 0,
-      "last_hits": 26,
-      "lane": null,
-      "lane_role": null,
-      "is_roaming": null,
-      "cluster": 182,
-      "leaver_status": 0,
-      "party_size": 1,
-      "hero_variant": 0
-    },
-    {
-      "match_id": 9083471481,
-      "player_slot": 0,
-      "radiant_win": false,
-      "hero_id": 5,
-      "start_time": 1794248376,
-      "duration": 2488,
-      "game_mode": 22,
-      "lobby_type": 7,
-      "version": null,
-      "kills": 2,
-      "deaths": 13,
-      "assists": 17,
-      "average_rank": 55,
-      "xp_per_min": 394,
-      "gold_per_min": 304,
-      "hero_damage": 13854,
-      "tower_damage": 0,
-      "hero_healing": 0,
-      "last_hits": 99,
-      "lane": null,
-      "lane_role": null,
-      "is_roaming": null,
-      "cluster": 181,
-      "leaver_status": 1,
-      "party_size": 1,
-      "hero_variant": 0
-    },
-    {
-      "match_id": 9083400031,
-      "player_slot": 132,
-      "radiant_win": false,
-      "hero_id": 131,
-      "start_time": 1794245182,
-      "duration": 1781,
-      "game_mode": 22,
-      "lobby_type": 7,
-      "version": null,
-      "kills": 3,
-      "deaths": 4,
-      "assists": 19,
-      "average_rank": 55,
-      "xp_per_min": 493,
-      "gold_per_min": 314,
-      "hero_damage": 11510,
-      "tower_damage": 260,
-      "hero_healing": 0,
-      "last_hits": 28,
-      "lane": null,
-      "lane_role": null,
-      "is_roaming": null,
-      "cluster": 185,
-      "leaver_status": 0,
-      "party_size": 1,
-      "hero_variant": 0
     }
   ],
   "win_loss": {
-    "win": 1911,
-    "lose": 1798
+    "win": 1912,
+    "lose": 1800
   },
   "heroes": [
     {
@@ -695,7 +695,7 @@
       "win": 90,
       "with_games": 240,
       "with_win": 130,
-      "against_games": 279,
+      "against_games": 280,
       "against_win": 140
     },
     {
@@ -710,8 +710,8 @@
     },
     {
       "hero_id": 48,
-      "last_played": 1771877284,
-      "games": 103,
+      "last_played": 1794430810,
+      "games": 104,
       "win": 55,
       "with_games": 129,
       "with_win": 83,
@@ -743,7 +743,7 @@
       "last_played": 1793902259,
       "games": 91,
       "win": 57,
-      "with_games": 165,
+      "with_games": 166,
       "with_win": 88,
       "against_games": 227,
       "against_win": 109
@@ -755,7 +755,7 @@
       "win": 43,
       "with_games": 146,
       "with_win": 84,
-      "against_games": 169,
+      "against_games": 170,
       "against_win": 71
     },
     {
@@ -765,8 +765,8 @@
       "win": 42,
       "with_games": 67,
       "with_win": 38,
-      "against_games": 89,
-      "against_win": 44
+      "against_games": 90,
+      "against_win": 45
     },
     {
       "hero_id": 31,
@@ -775,14 +775,14 @@
       "win": 39,
       "with_games": 110,
       "with_win": 52,
-      "against_games": 175,
-      "against_win": 97
+      "against_games": 177,
+      "against_win": 98
     },
     {
       "hero_id": 44,
-      "last_played": 1794424361,
-      "games": 68,
-      "win": 31,
+      "last_played": 1794433250,
+      "games": 70,
+      "win": 32,
       "with_games": 220,
       "with_win": 104,
       "against_games": 305,
@@ -793,7 +793,7 @@
       "last_played": 1794353801,
       "games": 64,
       "win": 31,
-      "with_games": 161,
+      "with_games": 162,
       "with_win": 84,
       "against_games": 290,
       "against_win": 162
@@ -805,7 +805,7 @@
       "win": 27,
       "with_games": 236,
       "with_win": 111,
-      "against_games": 322,
+      "against_games": 323,
       "against_win": 154
     },
     {
@@ -943,8 +943,8 @@
       "last_played": 1775915477,
       "games": 41,
       "win": 20,
-      "with_games": 269,
-      "with_win": 123,
+      "with_games": 270,
+      "with_win": 124,
       "against_games": 436,
       "against_win": 234
     },
@@ -965,7 +965,7 @@
       "win": 17,
       "with_games": 179,
       "with_win": 89,
-      "against_games": 184,
+      "against_games": 185,
       "against_win": 107
     },
     {
@@ -973,7 +973,7 @@
       "last_played": 1758138476,
       "games": 35,
       "win": 17,
-      "with_games": 158,
+      "with_games": 159,
       "with_win": 78,
       "against_games": 86,
       "against_win": 49
@@ -1015,7 +1015,7 @@
       "win": 11,
       "with_games": 169,
       "with_win": 87,
-      "against_games": 201,
+      "against_games": 202,
       "against_win": 97
     },
     {
@@ -1133,7 +1133,7 @@
       "last_played": 1746204150,
       "games": 20,
       "win": 9,
-      "with_games": 237,
+      "with_games": 238,
       "with_win": 120,
       "against_games": 310,
       "against_win": 154
@@ -1165,8 +1165,8 @@
       "win": 8,
       "with_games": 293,
       "with_win": 154,
-      "against_games": 301,
-      "against_win": 154
+      "against_games": 303,
+      "against_win": 155
     },
     {
       "hero_id": 91,
@@ -1213,8 +1213,8 @@
       "last_played": 1769197075,
       "games": 16,
       "win": 7,
-      "with_games": 170,
-      "with_win": 96,
+      "with_games": 171,
+      "with_win": 97,
       "against_games": 244,
       "against_win": 117
     },
@@ -1233,8 +1233,8 @@
       "last_played": 1762608997,
       "games": 16,
       "win": 10,
-      "with_games": 139,
-      "with_win": 69,
+      "with_games": 140,
+      "with_win": 70,
       "against_games": 85,
       "against_win": 47
     },
@@ -1293,7 +1293,7 @@
       "last_played": 1781637690,
       "games": 12,
       "win": 5,
-      "with_games": 78,
+      "with_games": 79,
       "with_win": 32,
       "against_games": 130,
       "against_win": 68
@@ -1353,7 +1353,7 @@
       "last_played": 1716319720,
       "games": 11,
       "win": 3,
-      "with_games": 127,
+      "with_games": 128,
       "with_win": 64,
       "against_games": 199,
       "against_win": 101
@@ -1403,9 +1403,9 @@
       "last_played": 1679338754,
       "games": 10,
       "win": 5,
-      "with_games": 105,
+      "with_games": 106,
       "with_win": 57,
-      "against_games": 109,
+      "against_games": 110,
       "against_win": 52
     },
     {
@@ -1415,8 +1415,8 @@
       "win": 4,
       "with_games": 419,
       "with_win": 229,
-      "against_games": 715,
-      "against_win": 361
+      "against_games": 717,
+      "against_win": 362
     },
     {
       "hero_id": 58,
@@ -1473,7 +1473,7 @@
       "last_played": 1746025399,
       "games": 8,
       "win": 5,
-      "with_games": 175,
+      "with_games": 176,
       "with_win": 96,
       "against_games": 200,
       "against_win": 97
@@ -1485,8 +1485,8 @@
       "win": 4,
       "with_games": 71,
       "with_win": 39,
-      "against_games": 106,
-      "against_win": 61
+      "against_games": 107,
+      "against_win": 62
     },
     {
       "hero_id": 114,
@@ -1553,8 +1553,8 @@
       "last_played": 1754846487,
       "games": 6,
       "win": 3,
-      "with_games": 263,
-      "with_win": 129,
+      "with_games": 264,
+      "with_win": 130,
       "against_games": 303,
       "against_win": 173
     },
@@ -1645,7 +1645,7 @@
       "win": 1,
       "with_games": 71,
       "with_win": 34,
-      "against_games": 57,
+      "against_games": 58,
       "against_win": 30
     },
     {
@@ -2013,11 +2013,10 @@
   ],
   "errors": {},
   "new_matches_since_previous_run": [
-    9086100538,
-    9086053649,
-    9085978988,
-    9085655935
+    9086256050,
+    9086221196,
+    9086154552
   ],
-  "comparison_snapshot": "2026-11-11T14:26:06Z",
+  "comparison_snapshot": "2026-11-11T20:08:56Z",
   "comparison_note": "Only IDs absent from the previous recent_matches list are marked new; older matches beyond the API window cannot be detected."
 }
