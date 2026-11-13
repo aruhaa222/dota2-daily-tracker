@@ -1,5 +1,5 @@
 {
-  "collected_at_utc": "2026-11-12T20:02:25Z",
+  "collected_at_utc": "2026-11-13T14:24:19Z",
   "account_id": 294194492,
   "player": {
     "profile": {
@@ -92,6 +92,34 @@
     ]
   },
   "recent_matches": [
+    {
+      "match_id": 9087647148,
+      "player_slot": 2,
+      "radiant_win": true,
+      "hero_id": 85,
+      "start_time": 1794528511,
+      "duration": 1490,
+      "game_mode": 23,
+      "lobby_type": 0,
+      "version": null,
+      "kills": 2,
+      "deaths": 11,
+      "assists": 13,
+      "average_rank": 54,
+      "xp_per_min": 2107,
+      "gold_per_min": 955,
+      "hero_damage": 9491,
+      "tower_damage": 1312,
+      "hero_healing": 5105,
+      "last_hits": 98,
+      "lane": null,
+      "lane_role": null,
+      "is_roaming": null,
+      "cluster": 181,
+      "leaver_status": 0,
+      "party_size": null,
+      "hero_variant": 0
+    },
     {
       "match_id": 9086256050,
       "player_slot": 0,
@@ -620,34 +648,6 @@
       "lane_role": null,
       "is_roaming": null,
       "cluster": 185,
-      "leaver_status": 0,
-      "party_size": 1,
-      "hero_variant": 0
-    },
-    {
-      "match_id": 9083628084,
-      "player_slot": 130,
-      "radiant_win": false,
-      "hero_id": 131,
-      "start_time": 1794256171,
-      "duration": 2568,
-      "game_mode": 22,
-      "lobby_type": 7,
-      "version": null,
-      "kills": 6,
-      "deaths": 7,
-      "assists": 23,
-      "average_rank": 61,
-      "xp_per_min": 571,
-      "gold_per_min": 339,
-      "hero_damage": 18496,
-      "tower_damage": 149,
-      "hero_healing": 1070,
-      "last_hits": 54,
-      "lane": null,
-      "lane_role": null,
-      "is_roaming": null,
-      "cluster": 181,
       "leaver_status": 0,
       "party_size": 1,
       "hero_variant": 0
@@ -2012,7 +2012,9 @@
     }
   ],
   "errors": {},
-  "new_matches_since_previous_run": [],
-  "comparison_snapshot": "2026-11-12T14:24:54Z",
+  "new_matches_since_previous_run": [
+    9087647148
+  ],
+  "comparison_snapshot": "2026-11-12T20:02:25Z",
   "comparison_note": "Only IDs absent from the previous recent_matches list are marked new; older matches beyond the API window cannot be detected."
 }
