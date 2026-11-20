@@ -1,5 +1,5 @@
 {
-  "collected_at_utc": "2026-11-20T09:14:33Z",
+  "collected_at_utc": "2026-11-20T14:24:06Z",
   "account_id": 294194492,
   "player": {
     "profile": {
@@ -2020,14 +2020,7 @@
     }
   ],
   "errors": {},
-  "new_matches_since_previous_run": [
-    9097218459,
-    9097160599,
-    9097031213,
-    9096990303,
-    9096056956,
-    9095996387
-  ],
-  "comparison_snapshot": "2026-11-18T20:08:58Z",
+  "new_matches_since_previous_run": [],
+  "comparison_snapshot": "2026-11-20T09:14:33Z",
   "comparison_note": "Only IDs absent from the previous recent_matches list are marked new; older matches beyond the API window cannot be detected."
 }
