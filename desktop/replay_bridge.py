@@ -1,4 +1,4 @@
-"""DotaPulse Replay Bridge 5.0: local, standard-library Windows replay catalog.
+"""DotaPulse Replay Bridge 6.0: local, standard-library Windows replay catalog.
 Does not decode Valve DEM internals or upload replay files.
 """
 import csv
@@ -12,7 +12,7 @@ import tkinter as tk
 from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
-APP = "DotaPulse Replay Bridge 5.0"
+APP = "DotaPulse Replay Bridge 6.0"
 DEFAULT_DIR = Path.home() / "Documents" / "DotaPulse"
 REPLAY_PATTERN = re.compile(r"(?<!\d)(\d{9,12})(?!\d)")
 
@@ -58,7 +58,7 @@ class Window:
         bottom = ttk.Frame(root, padding=12)
         bottom.pack(fill="x")
         ttk.Button(bottom, text="Открыть матч в OpenDota", command=self.open_match).pack(side="left")
-        ttk.Button(bottom, text="Экспорт JSON", command=self.export).pack(side="left", padx=8)
+        ttk.Button(bottom, text="Экспорт JSON", command=self.export).pack(side="left", padx=8)\n        ttk.Button(bottom, text="Экспорт CSV", command=self.export_csv).pack(side="left", padx=8)
         ttk.Label(bottom, textvariable=self.status).pack(side="right")
         ttk.Label(root, text="Локальный каталог: содержимое .dem не разбирается, файлы не отправляются в сеть.", padding=(12,0,12,12)).pack(anchor="w")
     def choose(self):
@@ -83,6 +83,17 @@ class Window:
             return
         import webbrowser
         webbrowser.open("https://www.opendota.com/matches/" + match_id)
+    def export_csv(self):
+        if not self.rows:
+            messagebox.showinfo(APP, "Сначала просканируйте папку.")
+            return
+        path = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV", "*.csv")], initialfile="dotapulse-replays.csv")
+        if not path: return
+        with Path(path).open("w", newline="", encoding="utf-8-sig") as fh:
+            writer = csv.DictWriter(fh, fieldnames=("name", "match_id", "size_mb", "modified_utc", "file"))
+            writer.writeheader()
+            writer.writerows(self.rows)
+        self.status.set("CSV сохранён локально")
     def export(self):
         if not self.rows:
             messagebox.showinfo(APP, "Сначала просканируйте папку.")
