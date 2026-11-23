@@ -58,7 +58,8 @@ class Window:
         bottom = ttk.Frame(root, padding=12)
         bottom.pack(fill="x")
         ttk.Button(bottom, text="Открыть матч в OpenDota", command=self.open_match).pack(side="left")
-        ttk.Button(bottom, text="Экспорт JSON", command=self.export).pack(side="left", padx=8)\n        ttk.Button(bottom, text="Экспорт CSV", command=self.export_csv).pack(side="left", padx=8)
+        ttk.Button(bottom, text="Экспорт JSON", command=self.export).pack(side="left", padx=8)
+        ttk.Button(bottom, text="Экспорт CSV", command=self.export_csv).pack(side="left", padx=8)
         ttk.Label(bottom, textvariable=self.status).pack(side="right")
         ttk.Label(root, text="Локальный каталог: содержимое .dem не разбирается, файлы не отправляются в сеть.", padding=(12,0,12,12)).pack(anchor="w")
     def choose(self):
