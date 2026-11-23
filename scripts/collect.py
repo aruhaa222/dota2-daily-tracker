@@ -99,7 +99,9 @@ def main():
         archive = stored
     by_id = {}
     for item in archive + recent:
-        if isinstance(item, dict) and isinstance(item.get("match_id"), int):
+        if isinstance(item, dict) and str(item.get("match_id", "")).isdigit():
+            item = dict(item)
+            item["match_id"] = int(item["match_id"])
             by_id[item["match_id"]] = item
     archive = sorted(by_id.values(), key=lambda m: m.get("start_time") or 0, reverse=True)
     # Keep a bounded history to limit repository growth.
