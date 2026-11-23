@@ -61,7 +61,7 @@ def main():
         raise RuntimeError("OpenDota win/loss fields invalid")
     if not all(isinstance(m, dict) and isinstance(m.get("match_id"), int) for m in recent):
         raise RuntimeError("OpenDota recent match records invalid")
-    old_ids = {int(m["match_id"]) for m in previous.get("recent_matches", []) if isinstance(m, dict) and m.get("match_id") is not None}
+    old_ids = {int(m["match_id"]) for m in previous.get("recent_matches", []) if isinstance(m, dict) and str(m.get("match_id", "")).isdigit()}
     new_ids = [m["match_id"] for m in recent if m["match_id"] not in old_ids]
     if not old_ids and previous:
         raise RuntimeError("Previous snapshot has no match IDs; refusing to label matches as new")
