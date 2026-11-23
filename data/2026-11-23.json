@@ -1,5 +1,5 @@
 {
-  "collected_at_utc": "2026-11-23T14:31:43Z",
+  "collected_at_utc": "2026-11-23T20:12:26Z",
   "account_id": 294194492,
   "player": {
     "profile": {
@@ -22,7 +22,7 @@
     },
     "rank_tier": 62,
     "leaderboard_rank": null,
-    "computed_mmr": 4127.7,
+    "computed_mmr": 4084.29,
     "computed_mmr_turbo": 4042.48,
     "aliases": [
       {
@@ -117,7 +117,7 @@
       "is_roaming": null,
       "cluster": 182,
       "leaver_status": 0,
-      "party_size": null,
+      "party_size": 1,
       "hero_variant": 0
     },
     {
@@ -145,7 +145,7 @@
       "is_roaming": null,
       "cluster": 185,
       "leaver_status": 0,
-      "party_size": null,
+      "party_size": 3,
       "hero_variant": 0
     },
     {
@@ -2021,6 +2021,6 @@
   ],
   "errors": {},
   "new_matches_since_previous_run": [],
-  "comparison_snapshot": "2026-11-23T09:36:13Z",
+  "comparison_snapshot": "2026-11-23T14:31:43Z",
   "comparison_note": "Only IDs absent from the previous recent_matches list are marked new; older matches beyond the API window cannot be detected."
 }
