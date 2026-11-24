@@ -1,0 +1,13 @@
+{
+  "collected_at_utc": "2026-11-24T08:30:30Z",
+  "account_id": 294194492,
+  "errors": {
+    "player": "HTTPError: HTTP Error 522: <none>",
+    "recent_matches": "HTTPError: HTTP Error 522: <none>",
+    "win_loss": "HTTPError: HTTP Error 522: <none>",
+    "heroes": "HTTPError: HTTP Error 522: <none>",
+    "ratings": "HTTPError: HTTP Error 522: <none>"
+  },
+  "new_matches_since_previous_run": [],
+  "comparison_snapshot": "2026-11-23T20:12:26Z"
+}
