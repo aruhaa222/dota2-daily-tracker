@@ -1,5 +1,5 @@
 {
-  "collected_at_utc": "2026-11-25T14:29:37Z",
+  "collected_at_utc": "2026-11-25T20:06:24Z",
   "account_id": 294194492,
   "player": {
     "profile": {
@@ -22,7 +22,7 @@
     },
     "rank_tier": 62,
     "leaderboard_rank": null,
-    "computed_mmr": 4049.5,
+    "computed_mmr": 4031.37,
     "computed_mmr_turbo": 4042.48,
     "aliases": [
       {
@@ -92,6 +92,34 @@
     ]
   },
   "recent_matches": [
+    {
+      "match_id": 9105314178,
+      "player_slot": 130,
+      "radiant_win": true,
+      "hero_id": 131,
+      "start_time": 1795626670,
+      "duration": 2616,
+      "game_mode": 22,
+      "lobby_type": 7,
+      "version": 22,
+      "kills": 12,
+      "deaths": 13,
+      "assists": 26,
+      "average_rank": 53,
+      "xp_per_min": 648,
+      "gold_per_min": 402,
+      "hero_damage": 29350,
+      "tower_damage": 263,
+      "hero_healing": 0,
+      "last_hits": 91,
+      "lane": 3,
+      "lane_role": 1,
+      "is_roaming": false,
+      "cluster": 183,
+      "leaver_status": 0,
+      "party_size": 2,
+      "hero_variant": 0
+    },
     {
       "match_id": 9104397894,
       "player_slot": 131,
@@ -623,45 +651,17 @@
       "leaver_status": 0,
       "party_size": null,
       "hero_variant": 0
-    },
-    {
-      "match_id": 9099948481,
-      "player_slot": 0,
-      "radiant_win": false,
-      "hero_id": 37,
-      "start_time": 1795284062,
-      "duration": 1959,
-      "game_mode": 2,
-      "lobby_type": 9,
-      "version": null,
-      "kills": 1,
-      "deaths": 10,
-      "assists": 6,
-      "average_rank": 63,
-      "xp_per_min": 398,
-      "gold_per_min": 235,
-      "hero_damage": 10593,
-      "tower_damage": 423,
-      "hero_healing": 1816,
-      "last_hits": 42,
-      "lane": null,
-      "lane_role": null,
-      "is_roaming": null,
-      "cluster": 184,
-      "leaver_status": 1,
-      "party_size": null,
-      "hero_variant": 0
     }
   ],
   "win_loss": {
     "win": 1939,
-    "lose": 1823
+    "lose": 1824
   },
   "heroes": [
     {
       "hero_id": 131,
-      "last_played": 1795555360,
-      "games": 472,
+      "last_played": 1795626670,
+      "games": 473,
       "win": 240,
       "with_games": 11,
       "with_win": 7,
@@ -705,7 +705,7 @@
       "win": 60,
       "with_games": 99,
       "with_win": 54,
-      "against_games": 139,
+      "against_games": 140,
       "against_win": 54
     },
     {
@@ -735,7 +735,7 @@
       "win": 51,
       "with_games": 159,
       "with_win": 78,
-      "against_games": 269,
+      "against_games": 270,
       "against_win": 153
     },
     {
@@ -803,7 +803,7 @@
       "last_played": 1775854222,
       "games": 64,
       "win": 27,
-      "with_games": 239,
+      "with_games": 240,
       "with_win": 111,
       "against_games": 328,
       "against_win": 156
@@ -913,7 +913,7 @@
       "last_played": 1716928145,
       "games": 46,
       "win": 21,
-      "with_games": 107,
+      "with_games": 108,
       "with_win": 51,
       "against_games": 135,
       "against_win": 74
@@ -1063,7 +1063,7 @@
       "last_played": 1788549857,
       "games": 23,
       "win": 12,
-      "with_games": 76,
+      "with_games": 77,
       "with_win": 44,
       "against_games": 148,
       "against_win": 75
@@ -1085,7 +1085,7 @@
       "win": 13,
       "with_games": 177,
       "with_win": 99,
-      "against_games": 239,
+      "against_games": 240,
       "against_win": 110
     },
     {
@@ -1183,7 +1183,7 @@
       "last_played": 1771949375,
       "games": 17,
       "win": 5,
-      "with_games": 142,
+      "with_games": 143,
       "with_win": 87,
       "against_games": 150,
       "against_win": 73
@@ -1415,7 +1415,7 @@
       "win": 4,
       "with_games": 423,
       "with_win": 232,
-      "against_games": 731,
+      "against_games": 732,
       "against_win": 371
     },
     {
@@ -1845,7 +1845,7 @@
       "win": 0,
       "with_games": 309,
       "with_win": 150,
-      "against_games": 314,
+      "against_games": 315,
       "against_win": 172
     },
     {
@@ -2020,7 +2020,9 @@
     }
   ],
   "errors": {},
-  "new_matches_since_previous_run": [],
-  "comparison_snapshot": "2026-11-25T09:24:25Z",
+  "new_matches_since_previous_run": [
+    9105314178
+  ],
+  "comparison_snapshot": "2026-11-25T14:29:37Z",
   "comparison_note": "Only IDs absent from the previous recent_matches list are marked new; older matches beyond the API window cannot be detected."
 }
