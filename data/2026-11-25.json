@@ -1,5 +1,5 @@
 {
-  "collected_at_utc": "2026-11-25T08:34:29Z",
+  "collected_at_utc": "2026-11-25T09:24:25Z",
   "account_id": 294194492,
   "player": {
     "profile": {
@@ -2021,62 +2021,9 @@
   ],
   "errors": {},
   "new_matches_since_previous_run": [
-    {
-      "match_id": 9104397894,
-      "player_slot": 131,
-      "radiant_win": false,
-      "hero_id": 5,
-      "start_time": 1795558810,
-      "duration": 3188,
-      "game_mode": 22,
-      "lobby_type": 7,
-      "version": null,
-      "kills": 5,
-      "deaths": 20,
-      "assists": 33,
-      "average_rank": 54,
-      "xp_per_min": 801,
-      "gold_per_min": 392,
-      "hero_damage": 21359,
-      "tower_damage": 0,
-      "hero_healing": 125,
-      "last_hits": 126,
-      "lane": null,
-      "lane_role": null,
-      "is_roaming": null,
-      "cluster": 181,
-      "leaver_status": 0,
-      "party_size": 2,
-      "hero_variant": 0
-    },
-    {
-      "match_id": 9104356245,
-      "player_slot": 3,
-      "radiant_win": false,
-      "hero_id": 131,
-      "start_time": 1795555360,
-      "duration": 2969,
-      "game_mode": 22,
-      "lobby_type": 7,
-      "version": null,
-      "kills": 4,
-      "deaths": 12,
-      "assists": 26,
-      "average_rank": 54,
-      "xp_per_min": 721,
-      "gold_per_min": 327,
-      "hero_damage": 22187,
-      "tower_damage": 45,
-      "hero_healing": 0,
-      "last_hits": 67,
-      "lane": null,
-      "lane_role": null,
-      "is_roaming": null,
-      "cluster": 181,
-      "leaver_status": 0,
-      "party_size": 2,
-      "hero_variant": 0
-    }
+    9104397894,
+    9104356245
   ],
-  "comparison_snapshot": "2026-11-24T20:12:29Z"
+  "comparison_snapshot": "2026-11-24T20:12:29Z",
+  "comparison_note": "Only IDs absent from the previous recent_matches list are marked new; older matches beyond the API window cannot be detected."
 }
