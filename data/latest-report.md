@@ -1,33 +1,39 @@
-# DotaPulse Coach — 24.11.2026
-
-Проверка: 24.11.2026 16:45 МСК. Последний успешный снимок: 2026-11-23T20:12:26Z (SHA 4d06d48201aa6ad77c8504460c95133fa73673dd), errors: {}. Предыдущий датированный снимок 23 ноября имеет ту же дату сбора и те же ID; новых ID нет. Сегодняшняя попытка сбора 08:30:30 UTC завершилась HTTP 522 по всем пяти endpoints согласно latest-report.md. Новые игры после последнего успешного снимка не исключены. Независимый API не проверялся. Сырые снимки не изменены.
-
-Последний известный матч: 9102060784, Ringmaster, 2026-11-23T03:32:58.000Z UTC, поражение, 3/11/13.
-Общий WR 51,56% (1936/3755); WR 5/10/20: 20/30/35%; смертей за 10 минут по 20 играм 3,11.
-Ringmaster 239/467 (51,18%), последние 20: 3/12, 2,98 смерти/10 мин.
-Dazzle 110/206 (53,40%), последние 20: 1/2, 2,73 смерти/10 мин.
-Disruptor 60/111 (54,05%); Winter Wyvern 12/17 (70,59%); в последних 20 игр нет.
-Расчётный MMR 4084,29; rank_tier 62 в последнем успешном снимке, свежего подтверждения изменения ранга нет.
-Цель: <=2,5 смерти/10 мин суммарно за следующие 3 обычных матча. Новых данных для оценки нет. Упражнение: разобрать 3 смерти последнего матча, отметить угрозу, позицию союзников и альтернативу; причины не установлены без событий реплея.
-Панель https://aruhaa222.github.io/dota2-daily-tracker/ — источник от 23 ноября 23:12 МСК, отображение не проверено.
-
-## Исходный отчёт сборщика
-
-# Dota 2 daily report: 2026-11-24
+# Dota 2 daily report: 2026-11-25
 
 - Account ID: 294194492
-- Collected (UTC): 2026-11-24T08:30:30Z
-- Compared with snapshot: 2026-11-23T20:12:26Z
-- New matches since previous snapshot: 0
+- Collected (UTC): 2026-11-25T08:34:29Z
+- Compared with snapshot: 2026-11-24T20:12:29Z
+- New matches since previous snapshot: 2
+
+## Overall record (OpenDota)
+
+- Wins / losses: 1939 / 1823
+- Win rate: 51.5%
 
 ## Recent matches
 
-Recent-match data was unavailable in this run; no new-match count was inferred.
+- Match `9104397894`: WIN; K/D/A 5/20/33; duration 53 min
+- Match `9104356245`: LOSS; K/D/A 4/12/26; duration 49 min
+- Match `9104204605`: WIN; K/D/A 7/3/22; duration 30 min
+- Match `9104119368`: LOSS; K/D/A 4/18/19; duration 44 min
+- Match `9103106916`: WIN; K/D/A 10/9/25; duration 48 min
+- Match `9103005779`: LOSS; K/D/A 7/15/25; duration 54 min
+- Match `9102925735`: LOSS; K/D/A 4/6/10; duration 46 min
+- Match `9102060784`: LOSS; K/D/A 3/11/13; duration 33 min
+- Match `9101904570`: WIN; K/D/A 10/15/26; duration 44 min
+- Match `9101873539`: LOSS; K/D/A 3/10/7; duration 38 min
+- Match `9101781697`: LOSS; K/D/A 5/14/11; duration 35 min
+- Match `9101709934`: LOSS; K/D/A 5/10/27; duration 40 min
+- Match `9101522883`: WIN; K/D/A 5/7/28; duration 36 min
+- Match `9101434880`: WIN; K/D/A 3/13/20; duration 50 min
+- Match `9101326827`: LOSS; K/D/A 9/14/20; duration 47 min
+- Match `9101234421`: LOSS; K/D/A 2/8/8; duration 29 min
+- Match `9100173150`: LOSS; K/D/A 3/12/8; duration 33 min
+- Match `9100113774`: WIN; K/D/A 5/7/26; duration 29 min
+- Match `9100022665`: LOSS; K/D/A 3/8/10; duration 26 min
+- Match `9099948481`: LOSS; K/D/A 1/10/6; duration 32 min
 
-## Data access warnings
+## Newly detected matches
 
-- player: HTTPError: HTTP Error 522: <none>
-- recent_matches: HTTPError: HTTP Error 522: <none>
-- win_loss: HTTPError: HTTP Error 522: <none>
-- heroes: HTTPError: HTTP Error 522: <none>
-- ratings: HTTPError: HTTP Error 522: <none>
+- `9104397894`: WIN; K/D/A 5/20/33
+- `9104356245`: LOSS; K/D/A 4/12/26
