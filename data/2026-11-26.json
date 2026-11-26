@@ -1,5 +1,5 @@
 {
-  "collected_at_utc": "2026-11-26T14:28:24Z",
+  "collected_at_utc": "2026-11-26T20:15:25Z",
   "account_id": 294194492,
   "player": {
     "profile": {
@@ -92,6 +92,34 @@
     ]
   },
   "recent_matches": [
+    {
+      "match_id": 9106635654,
+      "player_slot": 3,
+      "radiant_win": false,
+      "hero_id": 131,
+      "start_time": 1795716212,
+      "duration": 2495,
+      "game_mode": 22,
+      "lobby_type": 7,
+      "version": null,
+      "kills": 4,
+      "deaths": 15,
+      "assists": 16,
+      "average_rank": 55,
+      "xp_per_min": 648,
+      "gold_per_min": 297,
+      "hero_damage": 22565,
+      "tower_damage": 0,
+      "hero_healing": 0,
+      "last_hits": 51,
+      "lane": null,
+      "lane_role": null,
+      "is_roaming": null,
+      "cluster": 183,
+      "leaver_status": 0,
+      "party_size": null,
+      "hero_variant": 0
+    },
     {
       "match_id": 9106123775,
       "player_slot": 3,
@@ -623,45 +651,17 @@
       "leaver_status": 0,
       "party_size": 3,
       "hero_variant": 0
-    },
-    {
-      "match_id": 9101434880,
-      "player_slot": 128,
-      "radiant_win": false,
-      "hero_id": 50,
-      "start_time": 1795364175,
-      "duration": 3005,
-      "game_mode": 22,
-      "lobby_type": 7,
-      "version": null,
-      "kills": 3,
-      "deaths": 13,
-      "assists": 20,
-      "average_rank": 55,
-      "xp_per_min": 673,
-      "gold_per_min": 299,
-      "hero_damage": 12133,
-      "tower_damage": 267,
-      "hero_healing": 11658,
-      "last_hits": 48,
-      "lane": null,
-      "lane_role": null,
-      "is_roaming": null,
-      "cluster": 185,
-      "leaver_status": 0,
-      "party_size": 3,
-      "hero_variant": 0
     }
   ],
   "win_loss": {
     "win": 1940,
-    "lose": 1828
+    "lose": 1829
   },
   "heroes": [
     {
       "hero_id": 131,
-      "last_played": 1795693053,
-      "games": 478,
+      "last_played": 1795716212,
+      "games": 479,
       "win": 241,
       "with_games": 11,
       "with_win": 7,
@@ -915,7 +915,7 @@
       "win": 21,
       "with_games": 108,
       "with_win": 51,
-      "against_games": 135,
+      "against_games": 136,
       "against_win": 74
     },
     {
@@ -1015,7 +1015,7 @@
       "win": 11,
       "with_games": 174,
       "with_win": 90,
-      "against_games": 206,
+      "against_games": 207,
       "against_win": 99
     },
     {
@@ -1243,7 +1243,7 @@
       "last_played": 1719343780,
       "games": 14,
       "win": 4,
-      "with_games": 66,
+      "with_games": 67,
       "with_win": 35,
       "against_games": 103,
       "against_win": 41
@@ -1355,7 +1355,7 @@
       "win": 3,
       "with_games": 129,
       "with_win": 64,
-      "against_games": 203,
+      "against_games": 204,
       "against_win": 103
     },
     {
@@ -1415,7 +1415,7 @@
       "win": 4,
       "with_games": 423,
       "with_win": 232,
-      "against_games": 734,
+      "against_games": 735,
       "against_win": 371
     },
     {
@@ -1793,7 +1793,7 @@
       "last_played": 1454267157,
       "games": 1,
       "win": 1,
-      "with_games": 89,
+      "with_games": 90,
       "with_win": 44,
       "against_games": 173,
       "against_win": 90
@@ -1883,7 +1883,7 @@
       "last_played": 0,
       "games": 0,
       "win": 0,
-      "with_games": 72,
+      "with_games": 73,
       "with_win": 40,
       "against_games": 74,
       "against_win": 48
@@ -1913,7 +1913,7 @@
       "last_played": 0,
       "games": 0,
       "win": 0,
-      "with_games": 33,
+      "with_games": 34,
       "with_win": 12,
       "against_games": 31,
       "against_win": 18
@@ -1925,7 +1925,7 @@
       "win": 0,
       "with_games": 21,
       "with_win": 9,
-      "against_games": 27,
+      "against_games": 28,
       "against_win": 18
     }
   ],
@@ -2025,10 +2025,8 @@
   ],
   "errors": {},
   "new_matches_since_previous_run": [
-    9106123775,
-    9106070423,
-    9106035961
+    9106635654
   ],
-  "comparison_snapshot": "2026-11-26T09:21:10Z",
+  "comparison_snapshot": "2026-11-26T14:28:24Z",
   "comparison_note": "Only IDs absent from the previous recent_matches list are marked new; older matches beyond the API window cannot be detected."
 }
