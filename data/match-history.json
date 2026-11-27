@@ -1,5 +1,33 @@
 [
   {
+    "match_id": 9106749451,
+    "player_slot": 2,
+    "radiant_win": false,
+    "hero_id": 87,
+    "start_time": 1795721658,
+    "duration": 3080,
+    "game_mode": 22,
+    "lobby_type": 7,
+    "version": null,
+    "kills": 9,
+    "deaths": 15,
+    "assists": 43,
+    "average_rank": 61,
+    "xp_per_min": 703,
+    "gold_per_min": 334,
+    "hero_damage": 24825,
+    "tower_damage": 80,
+    "hero_healing": 89,
+    "last_hits": 32,
+    "lane": null,
+    "lane_role": null,
+    "is_roaming": null,
+    "cluster": 182,
+    "leaver_status": 0,
+    "party_size": 1,
+    "hero_variant": 0
+  },
+  {
     "match_id": 9106635654,
     "player_slot": 3,
     "radiant_win": false,
@@ -24,7 +52,7 @@
     "is_roaming": null,
     "cluster": 183,
     "leaver_status": 0,
-    "party_size": null,
+    "party_size": 1,
     "hero_variant": 0
   },
   {

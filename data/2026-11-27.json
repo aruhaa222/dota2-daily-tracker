@@ -1,5 +1,5 @@
 {
-  "collected_at_utc": "2026-11-27T08:30:23Z",
+  "collected_at_utc": "2026-11-27T09:21:42Z",
   "account_id": 294194492,
   "player": {
     "profile": {
@@ -2025,34 +2025,8 @@
   ],
   "errors": {},
   "new_matches_since_previous_run": [
-    {
-      "match_id": 9106749451,
-      "player_slot": 2,
-      "radiant_win": false,
-      "hero_id": 87,
-      "start_time": 1795721658,
-      "duration": 3080,
-      "game_mode": 22,
-      "lobby_type": 7,
-      "version": null,
-      "kills": 9,
-      "deaths": 15,
-      "assists": 43,
-      "average_rank": 61,
-      "xp_per_min": 703,
-      "gold_per_min": 334,
-      "hero_damage": 24825,
-      "tower_damage": 80,
-      "hero_healing": 89,
-      "last_hits": 32,
-      "lane": null,
-      "lane_role": null,
-      "is_roaming": null,
-      "cluster": 182,
-      "leaver_status": 0,
-      "party_size": 1,
-      "hero_variant": 0
-    }
+    9106749451
   ],
-  "comparison_snapshot": "2026-11-26T20:15:25Z"
+  "comparison_snapshot": "2026-11-26T20:15:25Z",
+  "comparison_note": "Only IDs absent from the previous recent_matches list are marked new; older matches beyond the API window cannot be detected."
 }
