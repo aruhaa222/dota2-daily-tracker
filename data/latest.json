@@ -1,5 +1,5 @@
 {
-  "collected_at_utc": "2026-11-27T21:58:08Z",
+  "collected_at_utc": "2026-11-28T16:53:23Z",
   "account_id": 294194492,
   "player": {
     "profile": {
@@ -10,13 +10,13 @@
       "cheese": 0,
       "steamid": "76561198254460220",
       "avatar": "https://avatars.steamstatic.com/9a5420d7cc6220af5b3b900e2dc44fa81ddfa0c6.jpg",
-      "avatarmedium": "https://avatars.steamstatic.com/9a5420d7cc6220af5b3b900e2dc44fa81ddfa0c6_medium.jpg",
-      "avatarfull": "https://avatars.steamstatic.com/9a5420d7cc6220af5b3b900e2dc44fa81ddfa0c6_full.jpg",
       "profileurl": "https://steamcommunity.com/id/3222282018/",
       "last_login": "2021-11-25T16:04:58.116Z",
       "loccountrycode": "EE",
       "status": null,
       "fh_unavailable": false,
+      "avatarmedium": "https://avatars.steamstatic.com/9a5420d7cc6220af5b3b900e2dc44fa81ddfa0c6_medium.jpg",
+      "avatarfull": "https://avatars.steamstatic.com/9a5420d7cc6220af5b3b900e2dc44fa81ddfa0c6_full.jpg",
       "is_contributor": false,
       "is_subscriber": false
     },
@@ -437,7 +437,7 @@
       "duration": 2931,
       "game_mode": 22,
       "lobby_type": 7,
-      "version": null,
+      "version": 22,
       "kills": 10,
       "deaths": 9,
       "assists": 25,
@@ -448,9 +448,9 @@
       "tower_damage": 12440,
       "hero_healing": 17235,
       "last_hits": 360,
-      "lane": null,
-      "lane_role": null,
-      "is_roaming": null,
+      "lane": 1,
+      "lane_role": 3,
+      "is_roaming": false,
       "cluster": 184,
       "leaver_status": 0,
       "party_size": 2,
@@ -2025,6 +2025,6 @@
   ],
   "errors": {},
   "new_matches_since_previous_run": [],
-  "comparison_snapshot": "2026-11-27T09:21:42Z",
+  "comparison_snapshot": "2026-11-27T21:58:08Z",
   "comparison_note": "Only IDs absent from the previous recent_matches list are marked new; older matches beyond the API window cannot be detected."
 }
